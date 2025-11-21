@@ -1,0 +1,16 @@
+# SSH keys
+*.pem
+
+# Terraform state
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# Ansible retry files
+*.retry
+
+# VS Code settings
+.vscode/
+
+# Python cache
+__pycache__/
