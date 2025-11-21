@@ -28,6 +28,7 @@ Ansible runs directly from Mac
 SSH key authentication
 
 How to Deploy (Step-by-Step)
+
 1️⃣ Clone the repository
 git clone git@github.com:rushin85/ansible-terraform-aws-lab.git
 cd ansible-terraform-aws-lab
