@@ -3,43 +3,6 @@ Complete DevOps project: Terraform AWS VPC + EC2, Ansible roles, NGINX automatio
 This project demonstrates a full DevOps workflow using Terraform, AWS, Ansible, and NGINX.
 It provisions AWS infrastructure with Terraform, then configures the EC2 instances using Ansible roles — all executed from a local development machine (VS Code + Mac).
 
-Local Mac (VS Code + Ansible)
-           │
-           │ SSH (private key)
-           ▼
- ┌────────────────────────────┐
- │           AWS VPC          │
- │   CIDR: 10.20.0.0/16       │
- │                            │
- │  ┌──────────────────────┐  │
- │  │   Public Subnet      │  │
- │  │   10.20.1.0/24        │  │
- │  │                      │   │
- │  │  EC2: ansible-node1  │   │
- │  │  Public IP           │   │
- │  │  NGINX installed     │   │
- │  └──────────────────────┘  │
- │                            │
- └────────────────────────────┘
-
-Local Mac (VS Code + Ansible)
-           │
-           │ SSH (private key)
-           ▼
- ┌────────────────────────────┐
- │           AWS VPC          │
- │   CIDR: 10.20.0.0/16       │
- │                            │
- │  ┌──────────────────────┐  │
- │  │   Public Subnet      │  │
- │  │   10.20.1.0/24        │  │
- │  │                      │   │
- │  │  EC2: ansible-node1  │   │
- │  │  Public IP           │   │
- │  │  NGINX installed     │   │
- │  └──────────────────────┘  │
- │                            │
- └────────────────────────────┘
 Provisioning: Terraform
 Configuration: Ansible
 Web Service: NGINX
@@ -63,36 +26,6 @@ Uses handlers for clean restarts
 VS Code as control machine
 Ansible runs directly from Mac
 SSH key authentication
-Clean project structure for portfolio
-
-Project Structure
-ansible-terraform-aws-lab/
-├── terraform/
-│   └── ansible_lab.tf
-│
-└── ansible/
-    ├── ansible.cfg
-    ├── inventory.ini
-    ├── install_nginx.yml
-    └── roles/
-        └── nginx/
-            ├── tasks/main.yml
-            ├── handlers/main.yml
-            └── templates/index.html.j2
-
-ansible-terraform-aws-lab/
-├── terraform/
-│   └── ansible_lab.tf
-│
-└── ansible/
-    ├── ansible.cfg
-    ├── inventory.ini
-    ├── install_nginx.yml
-    └── roles/
-        └── nginx/
-            ├── tasks/main.yml
-            ├── handlers/main.yml
-            └── templates/index.html.j2
 
 How to Deploy (Step-by-Step)
 1️⃣ Clone the repository
